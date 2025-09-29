@@ -11,3 +11,5 @@ from daisy.model.PureSVDRecommender import PureSVD
 from daisy.model.SLiMRecommender import SLiM
 from daisy.model.VAECFRecommender import VAECF
 from daisy.model.STARS_softplusRecommender import STARS_softplus
+from daisy.model.STARS_expRecommender import STARS_exp
+from daisy.model.GATSTARSRecommender import GATSTARS

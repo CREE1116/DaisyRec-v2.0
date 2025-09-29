@@ -32,7 +32,6 @@ class STARS_softplus(GeneralRecommender):
         self.factors = config['factors']
         self.num_topics = config['num_topics']
         self.lr = config['lr']
-        self.reg_1 = config['reg_1']
         self.reg_2 = config['reg_2']
         self.ortho_reg = config.get('ortho_reg', 0.01) # 직교 손실 가중치 추가
         self.topk = config['topk']
