@@ -44,10 +44,18 @@ def RecommenderModel(algo_name: str) -> GeneralRecommender:
     elif algo_name == 'lightgcn':
         from .LightGCNRecommender import LightGCN
         return LightGCN
+    elif algo_name == 'stars_softplus':
+        from .STARS_softplusRecommender import STARS_softplus
+        return STARS_softplus
+    elif algo_name == 'stars_exp':
+        from .STARS_expRecommender import STARS_exp
+        return STARS_exp
+    elif algo_name == 'gatstars':
+        from .GATSTARSRecommender import GATSTARS
+        return GATSTARS
     else:
         raise ModuleNotFoundError(f"Model name '{algo_name}' not found")
 
 
 
     
-

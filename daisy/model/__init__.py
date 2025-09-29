@@ -10,3 +10,4 @@ from daisy.model.PopRecommender import MostPop
 from daisy.model.PureSVDRecommender import PureSVD
 from daisy.model.SLiMRecommender import SLiM
 from daisy.model.VAECFRecommender import VAECF
+from daisy.model.STARS_softplusRecommender import STARS_softplus
