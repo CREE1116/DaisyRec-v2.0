@@ -1,7 +1,7 @@
 factors: 64
-lr: 0.001
+lr: 0.01
 ortho_reg: 0.01
 num_topics: 16
-epochs: 70
+epochs: 50
 reg_2: 0
 model_name: STARS_softplus

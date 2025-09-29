@@ -75,6 +75,11 @@ if __name__ == '__main__':
         train_loader = get_dataloader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=4)
         model.fit(train_loader)
 
+    elif config['algo_name'].lower() in ['stars_softplus','stars_exp','gatstars']:
+        model = RecommenderModel(config['algo_name'])(config)
+        train_dataset = BasicDataset(train_set.to_numpy()) # train 데이터프레임을 바로 사용
+        train_loader = get_dataloader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=4)
+        model.fit(train_loader)
     else:
         raise NotImplementedError('Something went wrong when building and training...')
     elapsed_time = time.time() - s_time
